@@ -5,7 +5,7 @@ import NavLink from '@/components/shared/NavLink';
 const Navbar = () => {
     return (
         <div className='bg-base-300'>
-            <div className="grid grid-cols-3 container mx-auto items-center py-2">
+            <div className="grid grid-cols-3 container mx-auto items-center py-4">
 
                 <div className="justify-self-start">
                     <Link href='/'>
@@ -26,7 +26,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className='flex gap-4 items-center justify-self-end'>
-                    <button className='btn btn-primary px-8 text-[18px]'>
+                    <button className='btn bg-sky-400 text-white px-8 text-[18px] rounded-3xl'>
                         <Link href={'/login'}>Login</Link>
                     </button>
                 </div>
