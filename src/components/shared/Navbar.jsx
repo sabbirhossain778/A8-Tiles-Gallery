@@ -4,7 +4,7 @@ import NavLink from '@/components/shared/NavLink';
 
 const Navbar = () => {
     return (
-        <div className='bg-base-300'>
+        <div className='bg-slate-300'>
             <div className="grid grid-cols-3 container mx-auto items-center py-4">
 
                 <div className="justify-self-start">
@@ -14,13 +14,13 @@ const Navbar = () => {
                 </div>
 
                 <ul className='flex justify-center items-center gap-8'>
-                    <li className='text-[18px] font-medium'>
+                    <li className='text-[18px] font-medium whitespace-nowrap'>
                         <NavLink href={'/'}>Home</NavLink>
                     </li>
-                    <li className='text-[18px] font-medium'>
+                    <li className='text-[18px] font-medium whitespace-nowrap'>
                         <NavLink href={'/all-tiles'}>All Tiles</NavLink>
                     </li>
-                    <li className='text-[18px] font-medium'>
+                    <li className='text-[18px] font-medium whitespace-nowrap'>
                         <NavLink href={'/my-profile'}>My Profile</NavLink>
                     </li>
                 </ul>
