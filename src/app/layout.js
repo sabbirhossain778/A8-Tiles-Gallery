@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const poppins = Poppins({
@@ -22,6 +24,7 @@ export default function RootLayout({ children }) {
     >
       <body className={`${poppins.className} min-h-full flex flex-col`}>
         {children}
+        <ToastContainer position="top-right" autoClose={3000} />
         </body>
     </html>
   );
