@@ -4,8 +4,10 @@ import NavLink from '@/components/shared/NavLink';
 
 const Navbar = () => {
     return (
-        <div className='bg-slate-300'>
-            <div className="grid grid-cols-3 container mx-auto items-center py-4">
+        // <div className='bg-slate-300'>
+               <div className='bg-slate-400 backdrop-blur-lg border-b sticky top-0 z-50'>
+             
+            <div className="grid grid-cols-3 container mx-auto items-center py-4 px-2">
 
                 <div className="justify-self-start">
                     <Link href='/'>

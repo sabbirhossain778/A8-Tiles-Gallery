@@ -3,130 +3,170 @@
     "id": "tile_001",
     "title": "Ceramic Blue Tile",
     "description": "Premium ceramic tile with a smooth blue glaze finish, perfect for modern bathrooms.",
-    "image": "https://i.ibb.co.com/8L0Y0pS/ceramic-blue.jpg",
+    "image": "https://m.media-amazon.com/images/I/61GlFjev59L._SL1500_.jpg",
     "category": "Ceramic",
     "price": 45.99,
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
     "inStock": true,
-    "tags": ["Minimalist", "Blue", "Bathroom"]
+    "tags": [
+      "Minimalist",
+      "Blue",
+      "Bathroom"
+    ]
   },
   {
     "id": "tile_002",
     "title": "Modern Geometric Pattern",
     "description": "Stylish geometric patterns that add a contemporary touch to your living room walls.",
-    "image": "https://i.ibb.co.com/Gv6Y1Xk/geometric.jpg",
+    "image": "https://tilemuse.com/cdn/shop/files/Decor-1x1-2849_1024x1024.jpg?v=1751830064",
     "category": "Decorative",
     "price": 55.50,
     "currency": "USD",
     "dimensions": "30x30 cm",
     "material": "Porcelain",
     "inStock": true,
-    "tags": ["Modern", "Geometric", "Living Room"]
+    "tags": [
+      "Modern",
+      "Geometric",
+      "Living Room"
+    ]
   },
   {
     "id": "tile_003",
     "title": "Terracotta Rust",
     "description": "Handcrafted terracotta tiles with a warm rust tone for a rustic kitchen aesthetic.",
-    "image": "https://i.ibb.co.com/mR0H0qN/terracotta.jpg",
+    "image": "https://cdn.shopify.com/s/files/1/1641/9293/files/What_Color_Goes_With_Terracotta_Tiles.jpg?v=1657021797",
     "category": "Rustic",
     "price": 38.00,
     "currency": "USD",
     "dimensions": "20x20 cm",
     "material": "Clay",
     "inStock": true,
-    "tags": ["Rustic", "Handmade", "Kitchen"]
+    "tags": [
+      "Rustic",
+      "Handmade",
+      "Kitchen"
+    ]
   },
   {
     "id": "tile_004",
     "title": "Marble Vein White",
     "description": "Luxurious white marble tiles with elegant grey veins for high-end flooring.",
-    "image": "https://i.ibb.co.com/pQ0L0fM/marble.jpg",
+    "image": "https://rmsmarble.com/wp-content/uploads/2022/01/Arabescato-Corchia-Swatch-RMS-Marble.jpg",
     "category": "Luxury",
     "price": 120.99,
     "currency": "USD",
     "dimensions": "80x80 cm",
     "material": "Marble",
     "inStock": true,
-    "tags": ["Luxury", "White", "Floor"]
+    "tags": [
+      "Luxury",
+      "White",
+      "Floor"
+    ]
   },
   {
     "id": "tile_005",
     "title": "Slate Grey Stone",
     "description": "Natural slate stone tiles providing a durable and textured surface for outdoor patios.",
-    "image": "https://i.ibb.co.com/kV0S0zG/slate.jpg",
+    "image": "https://www.designtiles.com.au/wp-content/uploads/2023/05/colorado-grey.jpg",
     "category": "Outdoor",
     "price": 65.00,
     "currency": "USD",
     "dimensions": "40x60 cm",
     "material": "Natural Stone",
     "inStock": false,
-    "tags": ["Durable", "Grey", "Outdoor"]
+    "tags": [
+      "Durable",
+      "Grey",
+      "Outdoor"
+    ]
   },
   {
     "id": "tile_006",
     "title": "Vintage Floral Mosaic",
     "description": "Intricate mosaic tiles featuring vintage floral designs for accent walls.",
-    "image": "https://i.ibb.co.com/vH0T0xP/floral.jpg",
+    "image": "https://thumbs.dreamstime.com/b/vintage-ceramic-mosaic-floor-tile-seamless-pattern-traditional-ornate-red-floral-design-eps-vector-70026631.jpg",
     "category": "Mosaic",
     "price": 72.25,
     "currency": "USD",
     "dimensions": "15x15 cm",
     "material": "Glass",
     "inStock": true,
-    "tags": ["Vintage", "Colorful", "Wall"]
+    "tags": [
+      "Vintage",
+      "Colorful",
+      "Wall"
+    ]
   },
   {
     "id": "tile_007",
     "title": "Industrial Concrete Finish",
     "description": "Concrete-look porcelain tiles designed for a sleek industrial office vibe.",
-    "image": "https://i.ibb.co.com/jW0K0yL/concrete.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzxYX9YS3xQHYRKky2zWyvMlFm2pk8GsqlVw&s",
     "category": "Industrial",
     "price": 49.99,
     "currency": "USD",
     "dimensions": "60x120 cm",
     "material": "Porcelain",
     "inStock": true,
-    "tags": ["Sleek", "Grey", "Office"]
+    "tags": [
+      "Sleek",
+      "Grey",
+      "Office"
+    ]
   },
   {
     "id": "tile_008",
     "title": "Emerald Glossy Tile",
     "description": "Deep emerald green tiles with a high-gloss finish, ideal for luxury backsplashes.",
-    "image": "https://i.ibb.co.com/fD0R0mH/emerald.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EF3naaqO3uUJ14K7W5j36mop_zjgt_wqrB3QwHatgw&s",
     "category": "Ceramic",
     "price": 58.00,
     "currency": "USD",
     "dimensions": "10x30 cm",
     "material": "Ceramic",
     "inStock": true,
-    "tags": ["Glossy", "Green", "Backsplash"]
+    "tags": [
+      "Glossy",
+      "Green",
+      "Backsplash"
+    ]
   },
   {
     "id": "tile_009",
     "title": "Onyx Black Pearl",
     "description": "Polished black onyx tiles that offer a mirror-like finish for a bold interior statement.",
-    "image": "https://i.ibb.co.com/rN0P0kC/black-onyx.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFaYJzKvnIMy4xHtbPS43rR2Muli-FNvaIqw&s",
     "category": "Luxury",
     "price": 145.50,
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Onyx Stone",
     "inStock": true,
-    "tags": ["Bold", "Black", "Interior"]
+    "tags": [
+      "Bold",
+      "Black",
+      "Interior"
+    ]
   },
   {
     "id": "tile_010",
     "title": "Bamboo Eco-Tile",
     "description": "Sustainable and eco-friendly bamboo textured tiles for a natural look.",
-    "image": "https://i.ibb.co.com/wL0M0bX/bamboo.jpg",
+    "image": "https://eq7nyutfcsd.exactdn.com/wp-content/uploads/2025/11/Herringbone-Hardwood-Flooring-in-Denver-CO.jpg?strip=all&fit=800%2C534",
     "category": "Eco-Friendly",
     "price": 42.00,
     "currency": "USD",
     "dimensions": "30x60 cm",
     "material": "Compressed Bamboo",
     "inStock": true,
-    "tags": ["Natural", "Eco-friendly", "Sustainable"]
+    "tags": [
+      "Natural",
+      "Eco-friendly",
+      "Sustainable"
+    ]
   }
 ]
