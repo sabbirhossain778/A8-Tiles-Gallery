@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     >
       <body className={`${poppins.className} min-h-full flex flex-col`}>
         {children}
-        <ToastContainer position="top-right" autoClose={3000} />
+        <ToastContainer position="top-right" autoClose={1500} />
         </body>
     </html>
   );
