@@ -3,38 +3,41 @@ import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, Form, Input, Label, TextField } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+
 import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
+    const [isShowPassword, setIsShowPassword] = useState(false);
     const router = useRouter();
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const userData = Object.fromEntries(formData.entries());
 
- const onSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const userData = Object.fromEntries(formData.entries());
+        const { data, error } = await authClient.signUp.email({
+            name: userData.name,
+            email: userData.email,
+            password: userData.password,
+            photoUrl: userData.photoUrl
+        });
 
-    const { data, error } = await authClient.signUp.email({
-        name: userData.name,
-        email: userData.email,
-        password: userData.password,
-        photoUrl: userData.photoUrl
-    });
+        toast.dismiss();
+        if (error) {
+            toast.error(error.message);
+        }
 
-    toast.dismiss();
-    if (error) {
-        toast.error(error.message);
-    }
+        if (data) {
+            toast.success(`Success! Welcome ${userData.name}`);
+            e.target.reset();
+            router.push('/login')
 
-    if (data) {
-        toast.success(`Success! Welcome ${userData.name}`);
-        e.target.reset();
-        router.push('/')
-
-        // setTimeout(() => {
-        //     window.location.href = "/";
-        // }, 500);
-    }
-};
+            // setTimeout(() => {
+            //     window.location.href = "/";
+            // }, 500);
+        }
+    };
 
     return (
         <div className="flex flex-col items-center pt-10 min-h-screen bg-gray-50">
@@ -68,7 +71,7 @@ const SignUpPage = () => {
 
                     {/* Photo URL Field */}
                     <TextField isRequired name="photoUrl" type="text">
-                        <Label className="text-sm font-semibold text-gray-700">Email</Label>
+                        <Label className="text-sm font-semibold text-gray-700">Photo Url</Label>
                         <Input
                             className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 "
                             placeholder="Photo url"
@@ -78,8 +81,7 @@ const SignUpPage = () => {
                     {/* Password Field */}
                     <TextField
                         isRequired
-                        name="password"
-                        type="password"
+                        name='password'
                         validate={(value) => {
                             if (value.length < 8) return "Min 8 characters required";
                             if (!/[A-Z]/.test(value)) return "Need at least one uppercase letter";
@@ -88,18 +90,30 @@ const SignUpPage = () => {
                         }}
                     >
                         <Label className="text-sm font-semibold text-gray-700">Password</Label>
-                        <Input
-                            type="password"
-                            className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                            placeholder="Your Password"
-                        />
-                        <Description className="text-[10px] text-gray-500">
+
+                        <div className="relative flex items-center">
+                            <Input
+                                type={isShowPassword ? 'text' : "password"}
+                                className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 w-full pr-10"
+                                placeholder="Your Password"
+                            />
+
+                            <button
+                                type="button"
+                                onClick={() => setIsShowPassword(!isShowPassword)}
+                                className="absolute right-3 text-xl"
+                            >
+                                {isShowPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
+                            </button>
+                        </div>
+
+                        <Description className="mt-2 text-[10px] text-gray-500">
                             Min 8 chars, 1 uppercase, 1 number
                         </Description>
                     </TextField>
 
                     {/* Buttons */}
-                    <div className="flex gap-3 mt-4">
+                    <div className="flex mt-4">
                         <Button
                             type="submit"
                             className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95"
@@ -107,12 +121,16 @@ const SignUpPage = () => {
                             <Check size={20} />
                             Sign Up
                         </Button>
-                        <Button
-                            type="reset"
-                            className="px-6 py-3 flex-1 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition-all"
+                    </div>
+
+                    <div className="text-center text-sm text-gray-600">
+                        Already have an account?{" "}
+                        <button
+                            onClick={() => router.push('/')}
+                            className="text-blue-600 font-bold hover:underline cursor-pointer"
                         >
-                            Reset
-                        </Button>
+                            Login here
+                        </button>
                     </div>
                 </Form>
             </div>

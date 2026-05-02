@@ -2,9 +2,14 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, Form, Input, Label, TextField } from "@heroui/react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { toast } from 'react-toastify';
+import { IoEyeOutline, IoEyeOffOutline, IoLogoGoogle } from "react-icons/io5";
 
 const SignInPage = () => {
+    const [isShowPassword, setIsShowPassword] = useState(false);
+    const router = useRouter();
     const onSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
@@ -27,6 +32,7 @@ const SignInPage = () => {
         if (data) {
             toast.success(`Success! Welcome ${userData.name}`);
             e.target.reset();
+            router.push('/');
         }
     };
 
@@ -55,8 +61,7 @@ const SignInPage = () => {
                     {/* Password Field */}
                     <TextField
                         isRequired
-                        name="password"
-                        type="password"
+                        name='password'
                         validate={(value) => {
                             if (value.length < 8) return "Min 8 characters required";
                             if (!/[A-Z]/.test(value)) return "Need at least one uppercase letter";
@@ -65,11 +70,23 @@ const SignInPage = () => {
                         }}
                     >
                         <Label className="text-sm font-semibold text-gray-700">Password</Label>
-                        <Input
-                            type="password"
-                            className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                            placeholder="Your Password"
-                        />
+
+                        <div className="relative flex items-center">
+                            <Input
+                                type={isShowPassword ? 'text' : "password"}
+                                className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 w-full pr-10"
+                                placeholder="Your Password"
+                            />
+
+                            <button
+                                type="button"
+                                onClick={() => setIsShowPassword(!isShowPassword)}
+                                className="absolute right-3 text-xl"
+                            >
+                                {isShowPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
+                            </button>
+                        </div>
+
                         <Description className="text-[10px] text-gray-500">
                             Min 8 chars, 1 uppercase, 1 number
                         </Description>
@@ -88,10 +105,44 @@ const SignInPage = () => {
                             Reset
                         </Button>
                     </div>
+
+                    {/* Or*/}
+                    <div className="relative flex items-center py-2">
+                        <div className="flex-grow border-t border-gray-200"></div>
+                        <span className="flex-shrink mx-4 text-gray-400 text-xs uppercase">Or</span>
+                        <div className="flex-grow border-t border-gray-200"></div>
+                    </div>
+
+                    {/* Google signIn button */}
+                    <Button
+                        onPress={async () => {
+                            await authClient.signIn.social({
+                                provider: "google",
+                                callbackURL: "/",
+                            });
+                        }}
+                        className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-lg flex items-center justify-center gap-2"
+                    >
+                        <IoLogoGoogle className="text-xl" />
+                        Sign In with Google
+                    </Button>
+
+                    {/* Go to register page */}
+                    <p className="text-center text-sm text-gray-600 mt-2">
+                        Don't have an account?{" "}
+                        <button
+                            type="button"
+                            onClick={() => router.push('/signup')}
+                            className="text-blue-600 font-bold hover:underline"
+                        >
+                            Register here
+                        </button>
+                    </p>
                 </Form>
             </div>
         </div>
     );
 };
+
 
 export default SignInPage;
