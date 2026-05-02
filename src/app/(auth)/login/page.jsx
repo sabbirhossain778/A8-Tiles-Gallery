@@ -17,7 +17,7 @@ const SignInPage = () => {
             callbackURL: '/'
         });
 
-        console.log(data, error, 'login')
+        // console.log(data, error, 'login')
 
         toast.dismiss();
         if (error) {

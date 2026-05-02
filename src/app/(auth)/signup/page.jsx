@@ -22,7 +22,7 @@ const SignUpPage = () => {
 
     toast.dismiss();
     if (error) {
-        toast.error(error.message || "Something went wrong!");
+        toast.error(error.message);
     }
 
     if (data) {
