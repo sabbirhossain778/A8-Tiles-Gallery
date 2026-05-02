@@ -17,7 +17,7 @@ const SignUpPage = () => {
         name: userData.name,
         email: userData.email,
         password: userData.password,
-        callbackURL: '/'
+        photoUrl: userData.photoUrl
     });
 
     toast.dismiss();
@@ -28,10 +28,11 @@ const SignUpPage = () => {
     if (data) {
         toast.success(`Success! Welcome ${userData.name}`);
         e.target.reset();
+        router.push('/')
 
-        setTimeout(() => {
-            window.location.href = "/";
-        }, 500);
+        // setTimeout(() => {
+        //     window.location.href = "/";
+        // }, 500);
     }
 };
 
@@ -62,6 +63,15 @@ const SignUpPage = () => {
                         <Input
                             className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 "
                             placeholder="Your Email"
+                        />
+                    </TextField>
+
+                    {/* Photo URL Field */}
+                    <TextField isRequired name="photoUrl" type="text">
+                        <Label className="text-sm font-semibold text-gray-700">Email</Label>
+                        <Input
+                            className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 "
+                            placeholder="Photo url"
                         />
                     </TextField>
 
