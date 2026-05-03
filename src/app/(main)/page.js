@@ -4,6 +4,7 @@ import Banner2 from '../../../public/assets/tiles1.jpg'
 import Link from "next/link";
 import MarqueeLine from "@/components/Home/MarqueeLine";
 import FeaturedSection from "@/components/Home/Featured";
+import { Suspense } from "react";
 
 
 export default function Home() {
@@ -47,7 +48,15 @@ export default function Home() {
       </div>
 
       <MarqueeLine />
-      <FeaturedSection />
-     </div>
+
+      <Suspense fallback={
+        <div className="flex flex-col items-center justify-center py-20 w-full">
+          <div className="loading loading-spinner loading-lg text-primary"></div>
+          <p className="mt-4 text-xl font-medium text-gray-500">Loading Featured Tiles...</p>
+        </div>
+      }>
+        <FeaturedSection />
+      </Suspense>
+    </div>
   );
 }

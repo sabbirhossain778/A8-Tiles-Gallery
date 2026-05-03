@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
+
 const TileDetailsPage = async ({ params }) => {
     const { id } = await params;
     console.log(id);
@@ -13,7 +14,7 @@ const TileDetailsPage = async ({ params }) => {
 
 
     return (
-        <div className="min-h-screen bg-white py-10">
+        <div className="min-h-90 bg-white py-10">
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 

@@ -10,7 +10,7 @@ const Navbar = () => {
 
     const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
-    console.log(user, 'navbar');
+    // console.log(user, 'navbar');
 
     return (
         <div className='bg-slate-400 backdrop-blur-lg border-b sticky top-0 z-50'>

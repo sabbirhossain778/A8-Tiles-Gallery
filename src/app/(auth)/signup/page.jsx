@@ -4,7 +4,7 @@ import { Check } from "@gravity-ui/icons";
 import { Button, Description, Form, Input, Label, TextField } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import { IoEyeOutline, IoEyeOffOutline, IoLogoGoogle } from "react-icons/io5";
 
 import { toast } from 'react-toastify';
 
@@ -122,11 +122,31 @@ const SignUpPage = () => {
                             Sign Up
                         </Button>
                     </div>
+                    {/* Or Divider */}
+                    <div className="relative flex items-center py-2">
+                        <div className="flex-grow border-t border-gray-200"></div>
+                        <span className="flex-shrink mx-4 text-gray-400 text-xs uppercase">Or</span>
+                        <div className="flex-grow border-t border-gray-200"></div>
+                    </div>
+
+                    {/* Google SignUp button */}
+                    <Button
+                        onPress={async () => {
+                            await authClient.signIn.social({
+                                provider: "google",
+                                callbackURL: "/",
+                            });
+                        }}
+                        className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-lg flex items-center justify-center gap-2"
+                    >
+                        <IoLogoGoogle className="text-xl" />
+                        Sign Up with Google
+                    </Button>
 
                     <div className="text-center text-sm text-gray-600">
                         Already have an account?{" "}
                         <button
-                            onClick={() => router.push('/')}
+                            onClick={() => router.push('/login')}
                             className="text-blue-600 font-bold hover:underline cursor-pointer"
                         >
                             Login here
