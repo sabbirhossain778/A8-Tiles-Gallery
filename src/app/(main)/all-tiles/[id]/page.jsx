@@ -10,17 +10,17 @@ const TileDetailsPage = async ({ params }) => {
     const data = await res.json();
     const tile = data.find(t => t.id == id);
 
-    if (!tile) return <div className="text-center py-20 text-2xl">Tile not found!</div>;
+    if (!tile) return <div className="text-center py-20 text-2xl min-h-[70vh]">Tile not found!</div>;
 
 
     return (
-        <div className="min-h-90 bg-white py-10">
+        <div className="min-h-fit lg:min-h-90 bg-white py-6 md:py-10">
             <div className="container mx-auto px-4 max-w-7xl">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
 
-                    {/* Left side */}
-                    <div>
-                        <div className="relative h-125 w-full rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                    {/* Left side - Image */}
+                    <div className="w-full">
+                        <div className="relative h-80 sm:h-100 md:h-110 lg:h-125 w-full rounded-xl overflow-hidden shadow-sm border border-gray-100">
                             <Image
                                 src={tile.image}
                                 alt={tile.title}
@@ -31,34 +31,34 @@ const TileDetailsPage = async ({ params }) => {
                         </div>
                     </div>
 
-                    {/* Right side */}
+                    {/* Right side - Content */}
                     <div className="flex flex-col">
-                        <h1 className="text-5xl font-bold text-gray-900 mb-2">{tile.title}</h1>
-                        <p className="text-cyan-600 font-medium mb-4">Category: <span className="text-gray-800">{tile.category}</span></p>
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">{tile.title}</h1>
+                        <p className="text-cyan-600 font-medium mb-4 text-sm sm:text-base">Category: <span className="text-gray-800">{tile.category}</span></p>
 
                         <div className="flex items-baseline gap-2 mb-6">
-                            <span className="text-4xl font-extrabold text-gray-900">{tile.price} {tile.currency || 'USD'}</span>
+                            <span className="text-3xl sm:text-4xl font-extrabold text-gray-900">{tile.price} {tile.currency || 'USD'}</span>
                         </div>
 
-                        <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+                        <p className="text-gray-600 leading-relaxed mb-8 text-base lg:text-lg">
                             {tile.description || "Durable, easy-to-clean ceramic tile with a beautiful glaze finish. Perfect for bathrooms, kitchens, and feature walls."}
                         </p>
 
-                        {/*  */}
+                        {/* Details Table */}
                         <div className="border-t border-b border-gray-100 py-6 mb-8">
-                            <div className="grid grid-cols-2 gap-y-4 text-sm">
+                            <div className="grid grid-cols-2 gap-y-4 text-xs sm:text-sm">
                                 <div className="text-gray-500 font-medium">Dimensions</div>
                                 <div className="text-gray-900 font-semibold">{tile.dimensions}</div>
-                                
+
                                 <div className="text-gray-500 font-medium">Material</div>
                                 <div className="text-gray-900 font-semibold">{tile.category}</div>
 
                                 <div className="text-gray-500 font-medium">Tags</div>
-                                <div className="text-gray-900 font-semibold flex gap-2">
+                                <div className="text-gray-900 font-semibold flex flex-wrap gap-2">
                                     {tile?.tags?.map((t, index) => (
                                         <span
                                             key={index}
-                                            className="bg-gray-100 px-2 py-1 rounded text-sm border border-gray-200"
+                                            className="bg-gray-100 px-2 py-1 rounded text-[10px] sm:text-sm border border-gray-200"
                                         >
                                             {t}
                                         </span>
@@ -72,17 +72,17 @@ const TileDetailsPage = async ({ params }) => {
                             </div>
                         </div>
 
-                        {/* Button */}
+                        {/* Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <div className="flex items-center border rounded-lg h-14">
-                                <button className="px-4 py-2 hover:bg-gray-50">-</button>
+                            <div className="flex items-center justify-between sm:justify-start border rounded-lg h-12 md:h-14">
+                                <button className="px-4 py-2 hover:bg-gray-50 font-bold text-xl">-</button>
                                 <input type="text" value="1" readOnly className="w-12 text-center font-bold outline-none" />
-                                <button className="px-4 py-2 hover:bg-gray-50">+</button>
+                                <button className="px-4 py-2 hover:bg-gray-50 font-bold text-xl">+</button>
                             </div>
-                            <button className="flex-1 bg-[#1d4ed8] hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-2 transition-all">
+                            <button className="flex-1 bg-[#1d4ed8] hover:bg-blue-800 text-white font-bold py-3 md:py-4 px-8 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
                                 Buy Now
                             </button>
-                            <button className="p-4 border rounded-lg hover:bg-gray-50">
+                            <button className="p-3 md:p-4 border rounded-lg hover:bg-gray-50 flex items-center justify-center">
                                 🤍
                             </button>
                         </div>

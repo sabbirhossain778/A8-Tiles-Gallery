@@ -22,7 +22,7 @@ export default function SearchInput() {
     return (
             <div className="flex flex-col items-start md:items-end gap-1"> 
             <div className="flex flex-col gap-1">
-                <label className="text-sm font-medium text-gray-700">Search products</label>
+                {/* <label className="text-sm font-medium text-gray-700">Search products</label> */}
                 
                 <div className="flex items-center rounded-3xl gap-2 border px-3 py-1.5 bg-white shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
                     <span className="text-gray-400">🔍</span>

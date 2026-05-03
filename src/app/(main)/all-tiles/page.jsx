@@ -17,8 +17,8 @@ const AllTilesPage = async ({ searchParams }) => {
             <div className='flex flex-col text-4xl pt-6 h-80vh container mx-auto'>
 
                 <div className="w-11/12 mx-auto ">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-                        <h2 className='text-4xl font-semibold'>All tiles are here</h2>
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:mb-6">
+                        <h2 className='text-3xl md:text-4xl font-semibold'>All tiles are here</h2>
                         <SearchInput />
                     </div>
                 </div>

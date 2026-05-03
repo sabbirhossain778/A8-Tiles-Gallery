@@ -38,10 +38,10 @@ const SignInPage = () => {
 
     return (
         <div className="flex flex-col items-center pt-10 min-h-screen bg-gray-50">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Sign In</h2>
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h2 className="text-3xl font-semibold md:font-bold mb-6 text-center text-gray-800">Sign In</h2>
 
-                <Form className="flex w-96 flex-col gap-5" onSubmit={onSubmit}>
+                <Form className="flex w-90 md:w-96 flex-col gap-5" onSubmit={onSubmit}>
 
                     {/* Email Field */}
                     <TextField isRequired name="email" type="email"
@@ -141,6 +141,8 @@ const SignInPage = () => {
                 </Form>
             </div>
         </div>
+
+
     );
 };
 

@@ -12,7 +12,7 @@ const MyProfilePage = () => {
     if (!user) return <p className="text-center mt-10 min-h-70">Loading...</p>;
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6">
+        <div className="flex flex-col items-center pt-20 md:pt-24 lg:justify-center min-h-[70vh]  bg-gray-50 p-6">
             {/* Animate.css */}
             <div className="animate__animated animate__fadeInUp bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
                 <div className="relative w-24 h-24 mx-auto mb-4">
@@ -21,7 +21,7 @@ const MyProfilePage = () => {
                         alt="profile" fill className="rounded-full border-4 border-blue-500 object-cover" 
                     />
                 </div>
-                <h2 className="text-2xl font-bold">{user.name}</h2>
+                <h2 className="text-2xl font-semibold">{user.name}</h2>
                 <p className="text-gray-500 mb-6">{user.email}</p>
                 
                 {/* Update Route  */}
