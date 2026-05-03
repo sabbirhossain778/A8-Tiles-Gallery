@@ -1,13 +1,6 @@
 import React from 'react';
 import TilesCard from './TilesCard';
-
-const getData = async () => {
-    const res = await fetch('https://a8-tiles-gallery-chi.vercel.app/tiles.json', { cache: 'no-store' })
-    const data = await res.json();
-    const topTiles = data.slice(0,5)
-    // console.log(topTiles,'top tiles');
-    return topTiles;
-}
+import { getData } from '@/lib/common-function';
 
 
 const FeaturedSection = async () => {

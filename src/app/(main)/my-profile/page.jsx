@@ -9,7 +9,7 @@ const MyProfilePage = () => {
     const router = useRouter();
     const user = session?.user;
 
-    if (!user) return <p className="text-center mt-10">Loading...</p>;
+    if (!user) return <p className="text-center mt-10 min-h-70">Loading...</p>;
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6">

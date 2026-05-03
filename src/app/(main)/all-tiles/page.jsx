@@ -1,28 +1,40 @@
 import TilesCard from '@/components/Home/TilesCard';
-import React from 'react';
+import { getData } from '@/lib/common-function';
+import SearchInput from '@/components/shared/SearchInput';
 
 
-const getData = async () => {
-    const res = await fetch('https://a8-tiles-gallery-chi.vercel.app/tiles.json', { cache: 'no-store' })
-    const data = await res.json();
-    return data;
-}
-
-
-
-const AllTilesPage = async () => {
+const AllTilesPage = async ({ searchParams }) => {
     const tilesData = await getData();
-    // console.log(tilesData, 'All Tiles Page');
+
+    const query = (await searchParams)?.search || "";
+
+    const filteredTiles = tilesData.filter((tile) =>
+        tile.title.toLowerCase().includes(query.toLowerCase())
+    );
 
     return (
         <div className=" bg-base-200">
             <div className='flex flex-col text-4xl pt-6 h-80vh container mx-auto'>
-                <h2 className='w-11/12 mx-auto font-semibold'>All tiles are here</h2>
-                <div className='grid grid-cols-3 gap-6 my-6 w-11/12 mx-auto'>
+
+                <div className="w-11/12 mx-auto ">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                        <h2 className='text-4xl font-semibold'>All tiles are here</h2>
+                        <SearchInput />
+                    </div>
+                </div>
+                
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-6 w-11/12 mx-auto'>
+
                     {
-                        tilesData.map((tiles) => {
-                            return <TilesCard key={tiles.id} tiles={tiles} />
-                        })
+                        filteredTiles.length > 0 ? (
+                            filteredTiles.map((tiles) => (
+                                <TilesCard key={tiles.id} tiles={tiles} />
+                            ))
+                        ) : (
+                            <p className="col-span-full text-center py-10 text-gray-500">
+                                No tiles found for `{query}``
+                            </p>
+                        )
                     }
                 </div>
             </div>
@@ -31,3 +43,4 @@ const AllTilesPage = async () => {
 };
 
 export default AllTilesPage;
+

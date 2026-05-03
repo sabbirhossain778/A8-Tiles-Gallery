@@ -30,9 +30,11 @@ const Navbar = () => {
                     <li className='text-[18px] font-medium whitespace-nowrap'>
                         <NavLink href={'/all-tiles'}>All Tiles</NavLink>
                     </li>
-                    <li className='text-[18px] font-medium whitespace-nowrap'>
+                    {
+                        user?  <li className='text-[18px] font-medium whitespace-nowrap'>
                         <NavLink href={'/my-profile'}>My Profile</NavLink>
-                    </li>
+                    </li> : ''
+                    }
                 </ul>
 
 
