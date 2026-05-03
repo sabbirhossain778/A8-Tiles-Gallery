@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧱 Tiles Gallery - Premium Ceramic & Wall Tiles Showcase
 
-## Getting Started
+**Tiles Gallery** is a modern e-commerce inspired platform for exploring and discovering premium tile collections. It provides a seamless experience for users to browse, filter, and view detailed information about various tile products with a focus on high-quality visuals and performance.
 
-First, run the development server:
+🔗 **[Live Demo Link](https://a8-tiles-gallery-chi.vercel.app/)** | 📂 **[Source Code](https://github.com/sabbirhossain778/A8-Tiles-Gallery)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📸 Preview
+![Tiles Gallery Screenshot](./tiles-gallery.png)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Project Overview
+বাসাবাড়ি বা অফিসের জন্য সঠিক টাইলস নির্বাচন করা এখন আরও সহজ। **Tiles Gallery** একটি ডিজিটাল শোরুম হিসেবে কাজ করে যেখানে ইউজাররা বিভিন্ন ডিজাইনের টাইলস দেখতে পারেন, সেগুলোর স্পেসিফিকেশন (সাইজ, মেটেরিয়াল) চেক করতে পারেন এবং নিজস্ব প্রোফাইল ম্যানেজ করতে পারেন।
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
+- **Dynamic Hero & Product Sliders:** Swiper.js ব্যবহার করে আধুনিক এবং রেসপন্সিভ স্লাইডার যা সব ডিভাইসে স্মুথ কাজ করে।
+- **Detailed Product Specifications:** প্রতিটি টাইলসের সাইজ, ক্যাটাগরি, দাম এবং ইন-স্টক স্ট্যাটাস দেখার জন্য ডেডিকেটেড পেজ।
+- **Secure Authentication:** Better Auth (Auth.js) এর মাধ্যমে ইমেইল এবং গুগল সোশ্যাল লগইন সিস্টেম।
+- **Responsive Navigation & UI:** মোবাইল-ফ্রেন্ডলি ড্রপডাউন মেনু এবং নেভবার যা সব স্ক্রিন সাইজের জন্য অপ্টিমাইজড।
+- **User Profile Management:** পার্সোনালাইজড প্রোফাইল পেজ যেখানে ইউজার তাদের তথ্য দেখতে এবং আপডেট করতে পারেন।
+- **Toast Notifications:** সফলভাবে লগইন বা কোনো অ্যাকশন সম্পন্ন হলে রিয়েল-টাইম ফিডব্যাক।
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Technologies Used
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS & HeroUI (NextUI)
+- **Animation:** Animate.css
+- **Authentication:** Better Auth / Auth.js
+- **Slider:** Swiper.js
+- **Icons:** React Icons & Gravity UI Icons
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Major Dependencies
+প্রজেক্টটি চালানোর জন্য নিচের মূল প্যাকেজগুলো ব্যবহৃত হয়েছে:
+- `next`: ^14.x
+- `react`: ^18.x
+- `swiper`: আধুনিক টাচ স্লাইডার তৈরির জন্য
+- `better-auth`: সহজ এবং সিকিউর অথেন্টিকেশনের জন্য
+- `react-toastify`: সুন্দর অ্যালার্ট এবং নোটিফিকেশনের জন্য
+- `@heroui/react`: প্রফেশনাল ইউআই কম্পোনেন্টের জন্য
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 💻 Local Setup Guide
+
+Follow these steps to run the project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/sabbirhossain778/A8-Tiles-Gallery](https://github.com/sabbirhossain778/A8-Tiles-Gallery)
