@@ -5,7 +5,7 @@ import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 const Footer = () => {
     return (
         <footer className="bg-[#00aeef] text-white py-12">
-            <div className="container mx-auto px-6 flex flex-col3 justify-between gap-10">
+            <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {/* About */}
                 <div className='flex-1'>
                     <h2 className="text-2xl font-bold mb-4 uppercase tracking-wider">Tile Gallery</h2>

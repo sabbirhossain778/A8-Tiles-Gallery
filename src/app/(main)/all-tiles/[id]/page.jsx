@@ -49,8 +49,22 @@ const TileDetailsPage = async ({ params }) => {
                             <div className="grid grid-cols-2 gap-y-4 text-sm">
                                 <div className="text-gray-500 font-medium">Dimensions</div>
                                 <div className="text-gray-900 font-semibold">{tile.dimensions}</div>
+                                
                                 <div className="text-gray-500 font-medium">Material</div>
                                 <div className="text-gray-900 font-semibold">{tile.category}</div>
+
+                                <div className="text-gray-500 font-medium">Tags</div>
+                                <div className="text-gray-900 font-semibold flex gap-2">
+                                    {tile?.tags?.map((t, index) => (
+                                        <span
+                                            key={index}
+                                            className="bg-gray-100 px-2 py-1 rounded text-sm border border-gray-200"
+                                        >
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
+
                                 <div className="text-gray-500 font-medium">Availability</div>
                                 <div className={`font-semibold ${tile.inStock ? 'text-green-600' : 'text-red-600'}`}>
                                     {tile.inStock ? 'In Stock' : 'Out of Stock'}
@@ -65,7 +79,7 @@ const TileDetailsPage = async ({ params }) => {
                                 <input type="text" value="1" readOnly className="w-12 text-center font-bold outline-none" />
                                 <button className="px-4 py-2 hover:bg-gray-50">+</button>
                             </div>
-                            <button  className="flex-1 bg-[#1d4ed8] hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-2 transition-all">
+                            <button className="flex-1 bg-[#1d4ed8] hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-2 transition-all">
                                 Buy Now
                             </button>
                             <button className="p-4 border rounded-lg hover:bg-gray-50">
