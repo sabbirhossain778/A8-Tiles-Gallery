@@ -5,8 +5,8 @@ import { Button, Description, Form, Input, Label, TextField } from "@heroui/reac
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { IoEyeOutline, IoEyeOffOutline, IoLogoGoogle } from "react-icons/io5";
-
 import { toast } from 'react-toastify';
+
 
 const SignUpPage = () => {
     const [isShowPassword, setIsShowPassword] = useState(false);

@@ -2,6 +2,11 @@ import TilesCard from '@/components/Home/TilesCard';
 import { getData } from '@/lib/fetch-data';
 import SearchInput from '@/components/shared/SearchInput';
 
+export const metadata = {
+  title: "Browse All Tiles | Tiles Gallery",
+  description: "Explore our complete collection of tiles including bathroom, kitchen, and outdoor designs. Filter by category, material, and price.",
+};
+
 
 const AllTilesPage = async ({ searchParams }) => {
     const tilesData = await getData();

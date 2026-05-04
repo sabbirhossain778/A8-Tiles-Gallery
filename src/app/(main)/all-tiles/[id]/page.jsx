@@ -2,6 +2,12 @@ import Image from 'next/image';
 import React from 'react';
 import BackButton from "@/components/shared/BackButton";
 
+export const metadata = {
+  title: "Tile Details | Quality & Specifications",
+  description: "View detailed information, dimensions, material quality, and pricing for our exclusive tile collection.",
+};
+
+
 
 const TileDetailsPage = async ({ params }) => {
     const { id } = await params;

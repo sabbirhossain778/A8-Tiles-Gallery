@@ -4,6 +4,8 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
+
+
 const MyProfilePage = () => {
     const { data: session } = authClient.useSession();
     const router = useRouter();

@@ -7,6 +7,11 @@ import FeaturedSection from "@/components/Home/Featured";
 import { Suspense } from "react";
 
 
+export const metadata = {
+  title: "Tiles Gallery | Premium Wall & Floor Tiles",
+  description: "Discover a wide range of premium ceramic and porcelain tiles for your home. Quality, durability, and style in every tile.",
+};
+
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
