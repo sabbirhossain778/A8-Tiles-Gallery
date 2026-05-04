@@ -66,7 +66,5 @@ export default function Home() {
         </Suspense>
       </div>
     </div>
-
-
   );
 }

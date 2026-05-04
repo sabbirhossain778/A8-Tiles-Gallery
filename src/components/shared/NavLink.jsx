@@ -10,7 +10,7 @@ const NavLink = ({href, children}) => {
     
     
     return (
-        <Link href={href} className={`${isActive ? ' text-sky-600 font-bold text-[18px]' : ''}`}>
+        <Link href={href} className={`${isActive ? ' text-blue-800 font-bold text-[20px]' : ''}`}>
             {children}
         </Link>
     );

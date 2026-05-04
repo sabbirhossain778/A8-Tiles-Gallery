@@ -5,6 +5,7 @@ import React from 'react';
 
 const TilesCard = ({ tiles }) => {
     return (
+        <div className="group transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl rounded-2xl overflow-hidden bg-white border border-gray-100 flex flex-col h-full">
         <div className="card bg-base-100 border-t-4 border-t-cyan-400 shadow-md overflow-hidden flex flex-col h-[450px]">
             <figure className='w-full relative aspect-square h-56'>
                 <Image
@@ -27,6 +28,7 @@ const TilesCard = ({ tiles }) => {
                     </Link>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
