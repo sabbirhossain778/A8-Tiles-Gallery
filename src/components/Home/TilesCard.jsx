@@ -1,12 +1,17 @@
+'use client'
 import { Chip } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useDetailsNavigation } from "@/lib/view-btn";
 
 const TilesCard = ({ tiles }) => {
+   const { handleViewDetails } = useDetailsNavigation();
+
     return (
         <div className="group transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl rounded-2xl overflow-hidden bg-white border border-gray-100 flex flex-col h-full">
         <div className="card bg-base-100 border-t-4 border-t-cyan-400 shadow-md overflow-hidden flex flex-col h-[450px]">
+
             <figure className='w-full relative aspect-square h-56'>
                 <Image
                     src={tiles.image}
@@ -18,13 +23,14 @@ const TilesCard = ({ tiles }) => {
                 />
             </figure>
             <Chip className='absolute right-4 top-4 bg-yellow-400 font-semibold'>{tiles.category}</Chip>
+
             <div className="card-body">
                 <h2 className="card-title">{tiles.title}</h2>
                 <p className='text-[16px] text-gray-600'>category : {tiles.category}</p>
                 <p className='text-[16px] text-gray-600'>Price : {tiles.price} {tiles.currency}</p>
                 <div className="card-actions">
                     <Link href={`/all-tiles/${tiles.id}`}>
-                    <button className="btn bg-sky-500 w-full text-white font-semibold text-[16px]">View Details</button>
+                    <button onClick={() => handleViewDetails(tiles.id)} className="btn bg-sky-500 w-full text-white font-semibold text-[16px]">View Details</button>
                     </Link>
                 </div>
             </div>

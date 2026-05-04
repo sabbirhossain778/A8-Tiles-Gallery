@@ -1,5 +1,5 @@
 import TilesCard from '@/components/Home/TilesCard';
-import { getData } from '@/lib/common-function';
+import { getData } from '@/lib/fetch-data';
 import SearchInput from '@/components/shared/SearchInput';
 
 
@@ -22,7 +22,7 @@ const AllTilesPage = async ({ searchParams }) => {
                         <SearchInput />
                     </div>
                 </div>
-                
+
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-6 w-11/12 mx-auto'>
 
                     {

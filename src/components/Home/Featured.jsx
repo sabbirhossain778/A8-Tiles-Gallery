@@ -1,11 +1,11 @@
 import React from 'react';
-import { getData } from '@/lib/common-function';
+import { getData } from '@/lib/fetch-data';
 import FeaturedSlider from './FeaturedSlider';
 
 const FeaturedSection = async () => {
 
     const tilesData = await getData();
-    const featuredTiles  = tilesData.slice(0, 5);
+    const featuredTiles = tilesData.slice(0, 5);
     return (
         <div className="flex flex-col py-6 md:py-10">
             {/* container mx-auto */}

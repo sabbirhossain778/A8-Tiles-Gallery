@@ -20,7 +20,7 @@ const SignUpPage = () => {
             name: userData.name,
             email: userData.email,
             password: userData.password,
-            photoUrl: userData.photoUrl
+            image: userData.photoUrl
         });
 
         toast.dismiss();

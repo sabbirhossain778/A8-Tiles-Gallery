@@ -10,7 +10,7 @@ const Navbar = () => {
 
     const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
-    // console.log(user, 'navbar');
+    console.log(user, 'navbar');
 
     return (
         <div className='bg-[#00aeef] text-white border-b border-white/10 sticky top-0 z-50 shadow-md'>
@@ -64,13 +64,15 @@ const Navbar = () => {
                                 {/* avatar */}
                                 <div className="flex items-center justify-center border-2 border-white/50 rounded-full p-0.5">
                                     {user?.image ? (
+                                      <Link href={'/my-profile'}>
                                         <Image
-                                            src={user?.image}
+                                            src={user?.image || Avatar}
                                             alt="User avatar"
                                             width={32}
                                             height={32}
-                                            className="rounded-full md:w-8.75 md:h-8.75"
-                                        />
+                                            unoptimized={true}
+                                            className="rounded-full"
+                                        /></Link>
                                     ) : (
                                         <RxAvatar className="text-[30px] md:text-[35px] text-white" />
                                     )}
