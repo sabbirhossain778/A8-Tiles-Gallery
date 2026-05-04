@@ -113,23 +113,19 @@ const SignUpPage = () => {
                     </TextField>
 
                     {/* Buttons */}
-                    <div className="flex flex-col mt-4 gap-4">
+                    <div className="flex gap-3 mt-4">
                         <Button
                             type="submit"
-                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95 w-full"
+                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95"
                         >
                             <Check size={20} />
                             Sign Up
                         </Button>
-                        
-                        <Button
-                            type="reset"
-                            variant="bordered"
-                            className="px-6 py-3 border border-gray-300 text-gray-600 font-semibold rounded-lg hover:bg-gray-50 transition-all active:scale-95 w-full"
-                        >
+                        <Button type="reset" variant="secondary">
                             Reset
                         </Button>
                     </div>
+
                     {/* Or Divider */}
                     <div className="relative flex items-center py-2">
                         <div className="flex-grow border-t border-gray-200"></div>
