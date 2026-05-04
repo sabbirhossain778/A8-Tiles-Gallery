@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import BackButton from "@/components/shared/BackButton";
 
 
 const TileDetailsPage = async ({ params }) => {
@@ -16,6 +17,7 @@ const TileDetailsPage = async ({ params }) => {
     return (
         <div className="min-h-fit lg:min-h-90 bg-white py-6 md:py-10">
             <div className="container mx-auto px-4 max-w-7xl">
+                <BackButton />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
 
                     {/* Left side - Image */}
