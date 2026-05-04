@@ -36,7 +36,7 @@ export default function Home() {
 
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
-          <div className="relative group w-full max-w-[400px] md:max-w-md lg:max-w-none">
+          <div className="relative group w-full max-w-100 md:max-w-md lg:max-w-none">
             <div className="absolute -inset-4 bg-[#23ad77]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all"></div>
 
             <Image
@@ -45,7 +45,7 @@ export default function Home() {
               width={600}
               height={500}
               priority
-              className="relative z-10 rounded-3xl shadow-2xl object-cover w-full h-auto transform transition-transform duration-500 hover:rotate-2"
+              className="relative z-10 rounded-3xl shadow-2xl object-cover w-full h-auto transform transition-transform duration-500 hover:rotate-360"
             />
           </div>
         </div>
